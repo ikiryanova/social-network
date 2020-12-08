@@ -1,0 +1,47 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__bcg {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.profile__bcg img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.profile__avatar {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.profile__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-desctiption {
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.profile-desctiption p {
+  margin: 10px 0;
+}
+
+.profile-contacts {
+  padding-left: 15px;
+}

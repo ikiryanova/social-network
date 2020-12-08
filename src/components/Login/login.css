@@ -1,0 +1,44 @@
+.form-login {
+  width: 300px;
+  resize: none;
+  background: #ecebeb;
+  height: 58px;
+  outline: none;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 17px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+
+.form-login__checkbox {
+  font-size: 17px;
+  display: flex;
+}
+
+.form-login__checkbox span {
+  margin-left: 7px;
+}
+
+.login-title {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.form_error {
+  color: rgb(228, 78, 78);
+  font-size: 18px;
+  font-weight: 500;
+  /* position: absolute; */
+  /* bottom: 7px;
+  left: 10px; */
+}
+
+.form-field {
+  position: relative;
+}
+
+.btn-login {
+  margin-top: 20px;
+}

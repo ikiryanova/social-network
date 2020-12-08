@@ -1,0 +1,17 @@
+.dialog {
+  padding: 7px 10px;
+}
+
+.dialog:hover {
+  background-color: rgb(215, 253, 206);
+  border-radius: 6px;
+}
+
+.dialog a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dialog a.dialog_active {
+  font-size: 25px;
+}

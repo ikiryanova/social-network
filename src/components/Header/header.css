@@ -1,0 +1,55 @@
+.header {
+  background: rgb(215, 253, 206);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  flex-basis: 30%;
+  margin: 20px 50px;
+}
+
+.header-logo a {
+  text-decoration: none;
+  display: flex;
+}
+
+.header-logo img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.header__title {
+  font-style: 24px;
+  color: #444343;
+}
+
+.header-login {
+  margin-right: 50px;
+}
+
+.header-login a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header-login__login {
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header-login__logout {
+  font-size: 18px;
+  width: 100px;
+}
+
+.header-login__link {
+  padding: 10px 15px;
+  font-weight: 500px;
+  font-size: 18px;
+}
+

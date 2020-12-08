@@ -1,0 +1,13 @@
+.btn-profile-info {
+  height: 45px;
+  margin-top: 10px;
+}
+
+.profile-person__type {
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.profile-person_flexbox {
+  display: flex;
+}

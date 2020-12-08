@@ -1,0 +1,44 @@
+.form-control.error input,
+.form-control.error textarea {
+  border: 1px solid rgba(255, 137, 137, 0.795);
+  background: rgb(255 195 195 / 54%);
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control span {
+  color: rgb(228, 78, 78);
+  padding-left: 15px;
+  font-size: 17px;
+  position: absolute;
+  top: 65px;
+  left: 0;
+}
+
+.form-field {
+  width: 300px;
+  resize: none;
+  background: #ecebeb;
+  height: 58px;
+  outline: none;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 17px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+
+.input {
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+.textarea {
+  resize: vertical;
+  height: 100px;
+  margin-bottom: 15px;
+}
+

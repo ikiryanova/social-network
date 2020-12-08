@@ -1,0 +1,22 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.posts__textarea {
+  width: 100%;
+  resize: vertical;
+  background: #ecebeb;
+  height: 58px;
+  outline: none;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.posts-btn {
+  margin-left: auto;
+  margin-top: 20px;
+}
