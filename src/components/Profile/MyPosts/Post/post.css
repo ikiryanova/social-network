@@ -1,0 +1,27 @@
+.post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.post__avatar img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post__avatar {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.post__text {
+  max-width: 90%;
+  font-size: 20px;
+  margin: 0 0 0 20px;
+}
+
+

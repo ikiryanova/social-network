@@ -1,0 +1,65 @@
+.dialogs-wrapper {
+  display: flex;
+}
+
+.dialogs {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.dialogs-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 20%;
+}
+
+.dialogs__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.dialog_active {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.messages {
+  overflow-y: scroll;
+  max-height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-basis: 40%;
+  margin-left: 40px;
+  margin-top: 60px;
+  padding-right: 40px;
+}
+
+.messages-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.messages__textarea {
+  width: 100%;
+  resize: none;
+  background: rgb(241, 240, 240);
+  height: 57px;
+  outline: none;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.message-btn {
+  margin-left: auto;
+  margin-top: 20px;
+}

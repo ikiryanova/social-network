@@ -1,0 +1,18 @@
+.status_open {
+  cursor: pointer;
+}
+
+.status_edit {
+  width: 100%;
+  background: #ecebeb;
+  outline: none;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.profile-person__status {
+  max-width: 500px;
+  display: inline-block;
+}
