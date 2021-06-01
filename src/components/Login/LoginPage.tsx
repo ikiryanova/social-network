@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Field, InjectedFormProps, reduxForm } from 'redux-form';
 import { Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { AppStateType } from '../../redux/redux-store';
 import { createField, GetStringKeys, Input } from '../common/FormsControls/FormsControls';
@@ -42,15 +42,6 @@ const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType, LoginFormOwnPro
 
 const LoginReduxForm = reduxForm<LoginFormValuesType, LoginFormOwnProps>({form: 'login'})(LoginForm); 
 
-type MapStatePropsType = {
-  captchaUrl: string | null
-  isAuth: boolean
-};
-
-type MapDispatchPropsType = {
-  loginUser: (email: string, password: string, rememberMe: boolean, captcha: string) => void
-};
-
 type LoginFormValuesType = {
   email: string
   password: string
@@ -60,9 +51,14 @@ type LoginFormValuesType = {
 
 type LoginFormValuesTypeKeys = GetStringKeys<LoginFormValuesType>;
 
-const Login: React.FC<MapStatePropsType & MapDispatchPropsType> = ({ loginUser, isAuth, captchaUrl }) => {
-  const onSubmit = (dataForm: any) => {
-    loginUser(dataForm.email, dataForm.password, dataForm.remeberMe, dataForm.captcha);
+export const LoginPage: React.FC = () => {
+  const captchaUrl = useSelector((state: AppStateType) => state.auth.captchaUrl);
+  const isAuth = useSelector((state: AppStateType) => state.auth.isAuth);
+
+  const dispatch = useDispatch();
+
+  const onSubmit = (dataForm: LoginFormValuesType) => {
+    dispatch(loginUser(dataForm.email, dataForm.password, dataForm.rememberMe, dataForm.captcha));
   };
 
   if (isAuth) {
@@ -76,10 +72,3 @@ const Login: React.FC<MapStatePropsType & MapDispatchPropsType> = ({ loginUser, 
     </div>
   );
 };
-
-const mapStateToProps = (state: AppStateType): MapStatePropsType => ({
-  isAuth: state.auth.isAuth,
-  captchaUrl: state.auth.captchaUrl
-})
-
-export default connect(mapStateToProps, { loginUser })(Login);

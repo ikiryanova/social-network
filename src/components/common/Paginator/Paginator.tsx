@@ -6,7 +6,7 @@ type PropsType = {
   pageSize: number,
   totalItemsCount: number,
   currentPage: number,
-  onChangePage: (page: number) => void,
+  onPageChanged: (page: number) => void,
   blockSize?: number 
 }
 
@@ -14,7 +14,7 @@ const Paginator: React.FC<PropsType> = ({
   pageSize,
   totalItemsCount,
   currentPage,
-  onChangePage,
+  onPageChanged,
   blockSize = 10
 }) => {
   let pagesCount = Math.ceil(totalItemsCount / pageSize);
@@ -37,7 +37,7 @@ const Paginator: React.FC<PropsType> = ({
         .map((page) => (
           <span
             key={page}
-            onClick={() => onChangePage(page)}
+            onClick={() => onPageChanged(page)}
             className={currentPage === page ? 'item_selected' : ' '}>
             {page}
           </span>

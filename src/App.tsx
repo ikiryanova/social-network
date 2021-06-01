@@ -3,20 +3,24 @@ import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { initializeApp } from './redux/app-reducer';
 import { compose } from 'redux';
+
+import { AppStateType } from './redux/redux-store';
 import Footer from './components/Footer/Footer';
+import HeaderContainer from './components/Header/HeaderContainer';
+import { LoginPage } from './components/Login/LoginPage';
+import Music from './components/Music/Music';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
-import Music from './components/Music/Music';
-import Settings from './components/Settings/Settings';
-import HeaderContainer from './components/Header/HeaderContainer';
 import Preloader from './components/common/Preloader/Preloader';
-import './App.css';
+import Settings from './components/Settings/Settings';
 import { withSuspense } from './components/hoc/withSuspense';
-import { AppStateType } from './redux/redux-store';
+
+import './App.css';
+
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
-const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
+const UsersPage = React.lazy(() => import('./components/Users/UsersPage'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
-const Login = React.lazy(() => import('./components/Login/Login'));
+//const Login = React.lazy(() => import('./components/Login/Login'));
 
 type MapPropsType = ReturnType<typeof mapStateToProps>;
 type DispatchPropsType = {
@@ -25,8 +29,8 @@ type DispatchPropsType = {
 
 const SuspendedDialogs = withSuspense(DialogsContainer);
 const SuspendedProfile = withSuspense(ProfileContainer);
-const SuspendedContainer = withSuspense(UsersContainer);
-const SuspendedLogin = withSuspense(Login);
+const SuspendedContainer = withSuspense(UsersPage);
+const SuspendedLogin = withSuspense(LoginPage);
 class App extends React.Component<MapPropsType & DispatchPropsType> {
   catchAllUnhedleErrors = (e: PromiseRejectionEvent) => {
     alert('Some error occered');
