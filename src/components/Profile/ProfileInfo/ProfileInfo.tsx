@@ -48,9 +48,6 @@ const ProfileInfo: React.FC<PropsType> = ({
 
   return (
     <>
-      <div className="profile__bcg">
-        <img src="https://img3.goodfon.ru/wallpaper/nbig/c/73/krasota-les-peyzazh.jpg" alt="bacground" />
-      </div>
       <div className="profile-info">
         <div>
           <div className="profile__avatar">
